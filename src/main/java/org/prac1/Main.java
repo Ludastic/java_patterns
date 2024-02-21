@@ -11,7 +11,8 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         String str = sc.nextLine();
         Predicate<String> pr = (String string) -> {
-            Pattern pattern = Pattern.compile("^[a-zA-Z0-9_!#$%&’*+/=?`{|}~^-]+(?:\\.[a-zA-Z0-9_!#$%&’*+/=?`{|}~^-]+)*@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*$");
+            Pattern pattern =
+                    Pattern.compile("^[a-zA-Z0-9_!#$%&’*+/=?`{|}~^-]+(?:\\.[a-zA-Z0-9_!#$%&’*+/=?`{|}~^-]+)*@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*$");
             Matcher matcher = pattern.matcher(string);
             return matcher.matches();
         };
