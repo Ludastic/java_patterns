@@ -17,7 +17,7 @@ public class Main {
                  map.entrySet()) {
                 System.out.println(entry.getKey()+": "+entry.getValue());
             }
-            System.out.println("Thread 1 ends");
+            System.out.println("Thread map 1 ends");
         });
 
         Thread thread2 = new Thread(() -> {
@@ -28,7 +28,7 @@ public class Main {
             for (var entry:map.entrySet()) {
                 System.out.println(entry.getKey()+": "+entry.getValue());
             }
-            System.out.println("Thread 2 ends");
+            System.out.println("Thread map 2 ends");
         });
         thread1.start();
 
@@ -44,7 +44,7 @@ public class Main {
                 set.add(i);
             }
             set.print();
-            System.out.println("Thread 1 ends");
+            System.out.println("Thread set 1 ends");
         });
 
         Thread thread2 = new Thread(() -> {
@@ -53,7 +53,7 @@ public class Main {
                 set.add(i);
             }
             set.print();
-            System.out.println("Thread 2 ends");
+            System.out.println("Thread set 2 ends");
         });
         thread1.start();
 

@@ -18,12 +18,12 @@ public class Main {
 
         executorService.execute(() ->{
             try {
-                Thread.sleep(199);
+                Thread.sleep(190);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
             int a=0;
-            for (int i =0; i<100000; i++) {
+            for (int i =0; i<1000; i++) {
                a++;
             }
             System.out.println("First");
